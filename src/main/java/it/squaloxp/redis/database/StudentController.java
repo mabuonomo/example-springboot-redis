@@ -10,8 +10,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-// https://www.baeldung.com/spring-data-redis-tutorial
-
 @Controller
 @RequestMapping(path = "/database")
 public class StudentController {

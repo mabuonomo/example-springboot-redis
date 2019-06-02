@@ -15,7 +15,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/posts")
 public class PostController {
-    // https://panlw.github.io/15425204595510.html
     private static final Logger log = LoggerFactory.getLogger(PostController.class);
 
     @Autowired
