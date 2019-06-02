@@ -30,7 +30,7 @@ public class StudentController {
 
     @GetMapping(path = "/add")
     public @ResponseBody Student add() {
-        Student randStudent = new Student(new Random().toString(), "Rand Houston", Student.Gender.MALE, 3);
+        Student randStudent = new Student(Integer.toString(new Random().nextInt()), "Rand Houston", Student.Gender.MALE, 3);
         return studentRepository.save(randStudent);
     }
 

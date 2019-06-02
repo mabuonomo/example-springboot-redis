@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import it.squaloxp.redis.message.utils.RedisMessagePublisher;
+
 @Controller
 @RequestMapping(path = "/message")
 public class MessageController {
@@ -15,7 +17,7 @@ public class MessageController {
     @Autowired
     RedisMessagePublisher redisMessagePublisher;
 
-    @GetMapping(path = "/get")
+    @GetMapping(path = "/publish")
     public @ResponseBody void post() {
         String message = "Message " + UUID.randomUUID();
         redisMessagePublisher.publish(message);

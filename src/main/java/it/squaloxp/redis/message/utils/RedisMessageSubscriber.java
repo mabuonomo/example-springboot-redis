@@ -1,4 +1,4 @@
-package it.squaloxp.redis.message;
+package it.squaloxp.redis.message.utils;
 
 import java.util.ArrayList;
 import java.util.List;

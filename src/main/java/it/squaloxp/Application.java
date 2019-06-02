@@ -11,9 +11,9 @@ import org.springframework.data.redis.listener.ChannelTopic;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 
-import it.squaloxp.redis.message.MessagePublisher;
-import it.squaloxp.redis.message.RedisMessagePublisher;
-import it.squaloxp.redis.message.RedisMessageSubscriber;
+import it.squaloxp.redis.message.utils.MessagePublisher;
+import it.squaloxp.redis.message.utils.RedisMessagePublisher;
+import it.squaloxp.redis.message.utils.RedisMessageSubscriber;
 
 @EnableCaching
 @SpringBootApplication
