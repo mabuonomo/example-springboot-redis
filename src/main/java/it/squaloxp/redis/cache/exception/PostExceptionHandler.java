@@ -1,4 +1,4 @@
-package it.squaloxp.redis.cache;
+package it.squaloxp.redis.cache.exception;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

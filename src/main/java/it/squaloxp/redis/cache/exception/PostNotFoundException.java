@@ -1,4 +1,4 @@
-package it.squaloxp.redis.cache;
+package it.squaloxp.redis.cache.exception;
 
 public class PostNotFoundException extends Exception {
     private static final long serialVersionUID = 1L;

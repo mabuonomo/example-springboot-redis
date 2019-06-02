@@ -8,6 +8,8 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
+import it.squaloxp.redis.cache.exception.PostNotFoundException;
+
 import java.util.List;
 
 @RestController

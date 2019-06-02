@@ -2,6 +2,8 @@ package it.squaloxp.redis.cache;
 
 import org.springframework.stereotype.Service;
 
+import it.squaloxp.redis.cache.exception.PostNotFoundException;
+
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;

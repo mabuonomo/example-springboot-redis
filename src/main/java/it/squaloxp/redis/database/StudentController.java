@@ -2,6 +2,7 @@ package it.squaloxp.redis.database;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 // https://www.baeldung.com/spring-data-redis-tutorial
 
 @Controller
-@RequestMapping(path = "/student")
+@RequestMapping(path = "/database")
 public class StudentController {
 
     @Autowired
@@ -29,12 +30,22 @@ public class StudentController {
         return studentRepository.findById("Eng2015001").get();
     }
 
+    @GetMapping(path = "/add")
+    public @ResponseBody Student add() {
+        Student randStudent = new Student(new Random().toString(), "Rand Houston", Student.Gender.MALE, 3);
+        return studentRepository.save(randStudent);
+    }
+
     @GetMapping(path = "/all")
     public @ResponseBody List<Student> all() {
-        Student engStudent = new Student("Eng2015001", "John Doe", Student.Gender.MALE, 1);
-        Student medStudent = new Student("Med2015001", "Gareth Houston", Student.Gender.MALE, 2);
-        studentRepository.save(engStudent);
-        studentRepository.save(medStudent);
+        List<Student> students = new ArrayList<>();
+        studentRepository.findAll().forEach(students::add);
+        return students;
+    }
+
+    @GetMapping(path = "/clear")
+    public @ResponseBody List<Student> clear() {
+        studentRepository.deleteAll();
 
         List<Student> students = new ArrayList<>();
         studentRepository.findAll().forEach(students::add);
