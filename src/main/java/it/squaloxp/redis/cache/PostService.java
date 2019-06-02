@@ -19,25 +19,25 @@ public class PostService {
     public void init() {
         posts = new ArrayList<>();
         posts.add(new Post("IDX001", "Cyberpunk is near", "Description",
-                "https://random-cdn.posts/images/xvn84934fnls.jpg", 555, new Author("Anna")));
+                "https://random-cdn.posts/images/xvn84934fnls.jpg", 555));
         posts.add(new Post("IDX002", "Welcome aboard of the hype train", "Description",
-                "https://random-cdn.posts/images/xvn84934fnls.jpg", 55, new Author("Josh")));
+                "https://random-cdn.posts/images/xvn84934fnls.jpg", 55));
         posts.add(new Post("IDX003", "How to improve programming skills ", "Description",
-                "https://random-cdn.posts/images/xvn84934fnls.jpg", 555, new Author("Kobe")));
+                "https://random-cdn.posts/images/xvn84934fnls.jpg", 555));
         posts.add(new Post("IDX004", "Top exercises for IT people", "Description",
-                "https://random-cdn.posts/images/xvn84934fnls.jpg", 55, new Author("Leo")));
+                "https://random-cdn.posts/images/xvn84934fnls.jpg", 55));
         posts.add(new Post("IDX005", "Case study of 75 years project", "Description",
-                "https://random-cdn.posts/images/xvn84934fnls.jpg", 55, new Author("Tom")));
+                "https://random-cdn.posts/images/xvn84934fnls.jpg", 55));
         posts.add(new Post("IDX006", "Machine Learning", "Description",
-                "https://random-cdn.posts/images/xvn84934fnls.jpg", 255, new Author("Alexa")));
+                "https://random-cdn.posts/images/xvn84934fnls.jpg", 255));
         posts.add(new Post("IDX007", "Memory leaks, how to find them ", "Description",
-                "https://random-cdn.posts/images/xvn84934fnls.jpg", 55, new Author("Frank")));
+                "https://random-cdn.posts/images/xvn84934fnls.jpg", 55));
         posts.add(new Post("IDX008", "Robots builds robots", "Description",
-                "https://random-cdn.posts/images/xvn84934fnls.jpg", 155, new Author("Milagros")));
+                "https://random-cdn.posts/images/xvn84934fnls.jpg", 155));
         posts.add(new Post("IDX009", "Quantum algorithms, from the scratch", "Description",
-                "https://random-cdn.posts/images/xvn84934fnls.jpg", 455, new Author("Sarah")));
+                "https://random-cdn.posts/images/xvn84934fnls.jpg", 455));
         posts.add(new Post("IDX010", "Coding, coding, coding", "Description",
-                "https://random-cdn.posts/images/xvn84934fnls.jpg", 255, new Author("Adam")));
+                "https://random-cdn.posts/images/xvn84934fnls.jpg", 255));
     }
 
     public void updatePost(Post post) {
@@ -67,7 +67,7 @@ public class PostService {
      */
     public List<Post> getTopPosts() {
         try {
-            TimeUnit.SECONDS.sleep(1);
+            TimeUnit.SECONDS.sleep(2);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

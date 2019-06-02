@@ -13,7 +13,7 @@ import it.squaloxp.redis.cache.exception.PostNotFoundException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/posts")
+@RequestMapping("/cache")
 public class PostController {
     private static final Logger log = LoggerFactory.getLogger(PostController.class);
 
@@ -48,11 +48,11 @@ public class PostController {
         return postService.getTopPosts();
     }
 
+    // clear cache
     @CacheEvict(value = "post-top")
     @GetMapping("/top/evict")
     public void evictTopPosts() {
         log.info("Evict post-top");
     }
-
 }
 

@@ -11,18 +11,16 @@ public class Post implements Serializable {
     private String description;
     private String image;
     private int shares;
-    private Author author;
 
     public Post() {
     }
 
-    public Post(String id, String title, String description, String image, int shares, Author author) {
+    public Post(String id, String title, String description, String image, int shares) {
         this.id = id;
         this.title = title;
         this.description = description;
         this.image = image;
         this.shares = shares;
-        this.author = author;
     }
 
     public String getId() {
@@ -63,13 +61,5 @@ public class Post implements Serializable {
 
     public void setShares(int shares) {
         this.shares = shares;
-    }
-
-    public Author getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(Author author) {
-        this.author = author;
     }
 }
