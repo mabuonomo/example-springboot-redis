@@ -1,8 +1,8 @@
 version: '3.3'
 services:
-    spring-boot-kata:
+    spring-boot:
         build:
-            context: ./
+            context: .docker/
             dockerfile: Dockerfile
         volumes:
             - './:/app'
